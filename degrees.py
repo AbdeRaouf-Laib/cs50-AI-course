@@ -62,14 +62,12 @@ def main():
     load_data(directory)
     print("Data loaded.")
 
-    # source = person_id_for_name(input("Name: "))
-    # if source is None:
-    #     sys.exit("Person not found.")
-    # target = person_id_for_name(input("Name: "))
-    # if target is None:
-    #     sys.exit("Person not found.")
-    source = person_id_for_name("Emma Watson")
-    target = person_id_for_name("Jennifer Lawrence")
+    source = person_id_for_name(input("Name: "))
+    if source is None:
+        sys.exit("Person not found.")
+    target = person_id_for_name(input("Name: "))
+    if target is None:
+        sys.exit("Person not found.")
     path = shortest_path(source, target)
     # path = list(neighbors_for_person(target))
     if path is None:
